@@ -1,0 +1,164 @@
+[2023-08-07 07:27:27,148] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [queued]>
+[2023-08-07 07:27:27,152] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [queued]>
+[2023-08-07 07:27:27,153] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-07 07:27:27,153] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-08-07 07:27:27,153] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-07 07:27:27,164] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): Requisita_tempo> on 2023-07-24 00:00:00+00:00
+[2023-08-07 07:27:27,167] {standard_task_runner.py:52} INFO - Started process 7309 to run task
+[2023-08-07 07:27:27,169] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'dados_climaticos', 'Requisita_tempo', 'scheduled__2023-07-24T00:00:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/dados_climaticos.py', '--cfg-path', '/tmp/tmpwt6foxw4', '--error-file', '/tmp/tmp7iqftmag']
+[2023-08-07 07:27:27,169] {standard_task_runner.py:80} INFO - Job 22: Subtask Requisita_tempo
+[2023-08-07 07:27:27,199] {task_command.py:370} INFO - Running <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [running]> on host Daniel.
+[2023-08-07 07:27:27,237] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=dados_climaticos
+AIRFLOW_CTX_TASK_ID=Requisita_tempo
+AIRFLOW_CTX_EXECUTION_DATE=2023-07-24T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-07-24T00:00:00+00:00
+[2023-08-07 07:27:27,238] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/daniel/Documents/airflow_dados_tempo/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/daniel/Documents/airflow_dados_tempo/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/daniel/Documents/airflow_dados_tempo/dags/dados_climaticos.py", line 10, in clima_tempo
+    tempo = CimlaTempo()
+TypeError: __init__() missing 1 required positional argument: 'data'
+[2023-08-07 07:27:27,241] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=dados_climaticos, task_id=Requisita_tempo, execution_date=20230724T000000, start_date=20230807T102727, end_date=20230807T102727
+[2023-08-07 07:27:27,251] {standard_task_runner.py:92} ERROR - Failed to execute job 22 for task Requisita_tempo (__init__() missing 1 required positional argument: 'data'; 7309)
+[2023-08-07 07:27:27,262] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-08-07 07:27:27,272] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-08-07 07:31:19,004] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [queued]>
+[2023-08-07 07:31:19,009] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [queued]>
+[2023-08-07 07:31:19,009] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-07 07:31:19,009] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-08-07 07:31:19,010] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-07 07:31:19,021] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): Requisita_tempo> on 2023-07-24 00:00:00+00:00
+[2023-08-07 07:31:19,024] {standard_task_runner.py:52} INFO - Started process 7736 to run task
+[2023-08-07 07:31:19,026] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'dados_climaticos', 'Requisita_tempo', 'scheduled__2023-07-24T00:00:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/dados_climaticos.py', '--cfg-path', '/tmp/tmpcmg7avk8', '--error-file', '/tmp/tmpf9y3adi9']
+[2023-08-07 07:31:19,026] {standard_task_runner.py:80} INFO - Job 22: Subtask Requisita_tempo
+[2023-08-07 07:31:19,057] {task_command.py:370} INFO - Running <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [running]> on host Daniel.
+[2023-08-07 07:31:19,095] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=dados_climaticos
+AIRFLOW_CTX_TASK_ID=Requisita_tempo
+AIRFLOW_CTX_EXECUTION_DATE=2023-07-24T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-07-24T00:00:00+00:00
+[2023-08-07 07:31:19,096] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/daniel/Documents/airflow_dados_tempo/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/daniel/Documents/airflow_dados_tempo/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/daniel/Documents/airflow_dados_tempo/dags/dados_climaticos.py", line 10, in clima_tempo
+    tempo = ClimaTempo()
+TypeError: __init__() missing 1 required positional argument: 'data'
+[2023-08-07 07:31:19,098] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=dados_climaticos, task_id=Requisita_tempo, execution_date=20230724T000000, start_date=20230807T103119, end_date=20230807T103119
+[2023-08-07 07:31:19,109] {standard_task_runner.py:92} ERROR - Failed to execute job 22 for task Requisita_tempo (__init__() missing 1 required positional argument: 'data'; 7736)
+[2023-08-07 07:31:19,118] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-08-07 07:31:19,130] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-08-07 07:32:51,017] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [queued]>
+[2023-08-07 07:32:51,022] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [queued]>
+[2023-08-07 07:32:51,022] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-07 07:32:51,022] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-08-07 07:32:51,022] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-07 07:32:51,034] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): Requisita_tempo> on 2023-07-24 00:00:00+00:00
+[2023-08-07 07:32:51,037] {standard_task_runner.py:52} INFO - Started process 7904 to run task
+[2023-08-07 07:32:51,039] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'dados_climaticos', 'Requisita_tempo', 'scheduled__2023-07-24T00:00:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/dados_climaticos.py', '--cfg-path', '/tmp/tmpw_mbhar5', '--error-file', '/tmp/tmpuf80i87m']
+[2023-08-07 07:32:51,040] {standard_task_runner.py:80} INFO - Job 22: Subtask Requisita_tempo
+[2023-08-07 07:32:51,069] {task_command.py:370} INFO - Running <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [running]> on host Daniel.
+[2023-08-07 07:32:51,110] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=dados_climaticos
+AIRFLOW_CTX_TASK_ID=Requisita_tempo
+AIRFLOW_CTX_EXECUTION_DATE=2023-07-24T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-07-24T00:00:00+00:00
+[2023-08-07 07:32:51,111] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/daniel/Documents/airflow_dados_tempo/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/daniel/Documents/airflow_dados_tempo/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/daniel/Documents/airflow_dados_tempo/dags/dados_climaticos.py", line 10, in clima_tempo
+    tempo = ClimaTempo()
+TypeError: __init__() missing 1 required positional argument: 'data'
+[2023-08-07 07:32:51,113] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=dados_climaticos, task_id=Requisita_tempo, execution_date=20230724T000000, start_date=20230807T103251, end_date=20230807T103251
+[2023-08-07 07:32:51,124] {standard_task_runner.py:92} ERROR - Failed to execute job 22 for task Requisita_tempo (__init__() missing 1 required positional argument: 'data'; 7904)
+[2023-08-07 07:32:51,132] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-08-07 07:32:51,143] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-08-07 07:34:01,688] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [queued]>
+[2023-08-07 07:34:01,694] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [queued]>
+[2023-08-07 07:34:01,694] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-07 07:34:01,694] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-08-07 07:34:01,694] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-07 07:34:01,707] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): Requisita_tempo> on 2023-07-24 00:00:00+00:00
+[2023-08-07 07:34:01,709] {standard_task_runner.py:52} INFO - Started process 8033 to run task
+[2023-08-07 07:34:01,711] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'dados_climaticos', 'Requisita_tempo', 'scheduled__2023-07-24T00:00:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/dados_climaticos.py', '--cfg-path', '/tmp/tmpgeg76m0o', '--error-file', '/tmp/tmp9q3l5xwd']
+[2023-08-07 07:34:01,712] {standard_task_runner.py:80} INFO - Job 22: Subtask Requisita_tempo
+[2023-08-07 07:34:01,743] {task_command.py:370} INFO - Running <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [running]> on host Daniel.
+[2023-08-07 07:34:01,781] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=dados_climaticos
+AIRFLOW_CTX_TASK_ID=Requisita_tempo
+AIRFLOW_CTX_EXECUTION_DATE=2023-07-24T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-07-24T00:00:00+00:00
+[2023-08-07 07:34:01,782] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/daniel/Documents/airflow_dados_tempo/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/daniel/Documents/airflow_dados_tempo/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/daniel/Documents/airflow_dados_tempo/dags/dados_climaticos.py", line 12, in clima_tempo
+    tempo.tempo()
+  File "/home/daniel/Documents/airflow_dados_tempo//dags/extrai_infos_clima.py", line 16, in tempo
+    f'{city}/{self.data}/{self.data + timedelta(days=7)}?unitGroup=metric&include=days&key={key}&contentType=csv')
+TypeError: can only concatenate str (not "datetime.timedelta") to str
+[2023-08-07 07:34:01,784] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=dados_climaticos, task_id=Requisita_tempo, execution_date=20230724T000000, start_date=20230807T103401, end_date=20230807T103401
+[2023-08-07 07:34:01,794] {standard_task_runner.py:92} ERROR - Failed to execute job 22 for task Requisita_tempo (can only concatenate str (not "datetime.timedelta") to str; 8033)
+[2023-08-07 07:34:01,804] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-08-07 07:34:01,834] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2023-08-07 07:37:23,777] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [queued]>
+[2023-08-07 07:37:23,782] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [queued]>
+[2023-08-07 07:37:23,782] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-07 07:37:23,782] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2023-08-07 07:37:23,782] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2023-08-07 07:37:23,795] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): Requisita_tempo> on 2023-07-24 00:00:00+00:00
+[2023-08-07 07:37:23,797] {standard_task_runner.py:52} INFO - Started process 8342 to run task
+[2023-08-07 07:37:23,799] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'dados_climaticos', 'Requisita_tempo', 'scheduled__2023-07-24T00:00:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/dados_climaticos.py', '--cfg-path', '/tmp/tmp4yh45z0g', '--error-file', '/tmp/tmpmd1jkvtp']
+[2023-08-07 07:37:23,799] {standard_task_runner.py:80} INFO - Job 22: Subtask Requisita_tempo
+[2023-08-07 07:37:23,830] {task_command.py:370} INFO - Running <TaskInstance: dados_climaticos.Requisita_tempo scheduled__2023-07-24T00:00:00+00:00 [running]> on host Daniel.
+[2023-08-07 07:37:23,869] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=dados_climaticos
+AIRFLOW_CTX_TASK_ID=Requisita_tempo
+AIRFLOW_CTX_EXECUTION_DATE=2023-07-24T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-07-24T00:00:00+00:00
+[2023-08-07 07:37:23,869] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/daniel/Documents/airflow_dados_tempo/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/daniel/Documents/airflow_dados_tempo/venv/lib/python3.9/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/home/daniel/Documents/airflow_dados_tempo/dags/dados_climaticos.py", line 12, in clima_tempo
+    tempo.tempo()
+  File "/home/daniel/Documents/airflow_dados_tempo//dags/extrai_infos_clima.py", line 16, in tempo
+    f'{city}/{self.data.strftime("%Y-%m-%d")}?unitGroup=metric&include=days&key={key}&contentType=csv')
+AttributeError: 'str' object has no attribute 'strftime'
+[2023-08-07 07:37:23,872] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=dados_climaticos, task_id=Requisita_tempo, execution_date=20230724T000000, start_date=20230807T103723, end_date=20230807T103723
+[2023-08-07 07:37:23,881] {standard_task_runner.py:92} ERROR - Failed to execute job 22 for task Requisita_tempo ('str' object has no attribute 'strftime'; 8342)
+[2023-08-07 07:37:23,891] {local_task_job.py:156} INFO - Task exited with return code 1
+[2023-08-07 07:37:23,903] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -14,7 +14,7 @@ with DAG(
 
     tarefa_1 = BashOperator(
         task_id = 'cria_pasta',
-        bash_command = 'mkdir -p "/home/millenagena/Documents/airflowalura/semana={{data_interval_end.strftime("%Y-%m-%d")}}"'
+        bash_command = 'mkdir -p "/home/danielsa/airflow_dados_tempo/pipeline_dados_climaticos/dags/semana={{data_interval_end.strftime("%Y-%m-%d")}}"'
     )
 
     def extrai_dados(data_interval_end):
@@ -26,7 +26,7 @@ with DAG(
 
         dados = pd.read_csv(URL)
 
-        file_path = f'home/millenagena/Documents/airflowalura/semana={data_interval_end}/'
+        file_path = f'/home/danielsa/airflow_dados_tempo/pipeline_dados_climaticos/dags/semana={data_interval_end}/'
 
         dados.to_csv(file_path + 'dados_brutos.csv')
         dados[['datetime', 'tempmin', 'temp', 'tempmax']].to_csv(file_path + 'temperaturas.csv')

@@ -8,7 +8,7 @@ import pandas as pd
 
 with DAG(
         "dados_climaticos",
-        start_date=pendulum.datetime(2022, 8, 22, tz="UTC"),
+        start_date=pendulum.datetime(2023, 7, 23, tz="UTC"),
         schedule_interval='0 0 * * 1', # executar toda segunda feira
     ) as dag:
 
@@ -19,7 +19,7 @@ with DAG(
 
     def extrai_dados(data_interval_end):
         city = 'Boston'
-        key = 'ANZQ5K8QQP8BXZ85F4EQ2FPK'
+        key = 'WUJNC83UK3WMCFVMXQU9G3PRU'
 
         URL = join('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/',
         f'{city}/{data_interval_end}/{ds_add(data_interval_end, 7)}?unitGroup=metric&include=days&key={key}&contentType=csv')
